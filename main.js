@@ -1,7 +1,7 @@
 import air from "./circle.js";
+import fibonacci from "./fibonacci.js";
 import sunday from "./sunday.js";
 
-let r = 2;
-
-console.log(air(r));
+console.log(air(2));
 console.log(sunday());
+console.log(fibonacci(8));
