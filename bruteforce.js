@@ -19,3 +19,20 @@ export default function bruteForce(phrase, key) {
   }
   return res;
 }
+
+export function bruteforce2(str) {
+  let decryptedString = "";
+  console.log("Voici les résultats :\n");
+  const tab = "abcdefghijklmnopqrstuvwxyz";
+  for (let i = 0; i < 25; i++) {
+    for (let x = 0; x < str.length; x++) {
+      let c = str.charAt(x);
+      let position = tab.indexOf(c);
+      let decalage = (position + i) % 25;
+      decryptedString += tab[decalage];
+    }
+    console.log(decryptedString);
+    console.log("\n");
+    decryptedString = "";
+  }
+}
